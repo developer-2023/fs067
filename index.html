@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        #top-header {color: silver;}
+        .heading.header {color: green;}
+        .heading {color: orange;}
+        h1 {color: red;}
+        h1 {color: blue;}
+        /*
+            Priority of CSS sources
+            -----------------------
+            4. User agent stylesheets
+            3. Author stylesheets
+            2. Important author stylesheets (!important)
+            1. Important user settings ("Dark Background and Light Text")
+
+            If it doesn't resolve the conflict specificity must be used.
+            3. tag
+            2. class
+            1. id
+        */
+    </style>
+</head>
+<body>
+    <h1 style="color:yellow;" id="top-header" class="heading header">
+        Heading
+    </h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+    </ul>
+</body>
+</html>
